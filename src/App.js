@@ -1,7 +1,7 @@
 import './App.css';
 import configureStore from './store/configureStore';
 import { Provider } from 'react-redux';
-import Note from './components/note';
+import Notes from './components/notes';
 const store = configureStore();
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
 
   return (
     <Provider store={store}>
-      <Note></Note>
+      <Notes></Notes>
 
     </Provider>
   );
