@@ -9,7 +9,7 @@ const Notes = () => {
   const dispatch = useDispatch();
   const noteData = {
     title: "Mofty",
-    color: "green",
+    color: "cyan",
     content:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam odio labore beatae omnis amet alias totam cumque debitis doloribus, fugit adipisci fugiat maiores culpa, repellendus, eveniet quae eligendi impedit temporibus?",
   };

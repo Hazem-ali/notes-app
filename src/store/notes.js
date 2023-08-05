@@ -12,6 +12,7 @@ const slice = createSlice({
         title: action.payload.title,
         color: action.payload.color,
         content: action.payload.content,
+        group: action.payload.group,
       });
       return notes;
     },
