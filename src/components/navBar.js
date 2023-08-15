@@ -1,14 +1,15 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 const NavBar = () => {
   return (
     <nav
       className="navbar navbar-expand-lg navbar-light"
       style={{ backgroundColor: "#e3f2fd" }}
     >
-      <a className="navbar-brand" href="#">
+      <Link className="navbar-brand" to="/">
         Navbar
-      </a>
+      </Link>
       <button
         className="navbar-toggler"
         type="button"
@@ -23,14 +24,14 @@ const NavBar = () => {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item active">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="/">
               Home
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="/notes">
               Notes
-            </a>
+            </Link>
           </li>
 
         </ul>

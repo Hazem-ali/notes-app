@@ -3,10 +3,12 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { noteAdded } from "../store/notes";
 import Note from "./note";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const Notes = () => {
   const notes = useSelector((state) => state.notes);
   const dispatch = useDispatch();
+  const history = useHistory();
   const noteData = {
     title: "Mofty",
     color: "cyan",
@@ -20,7 +22,8 @@ const Notes = () => {
   return (
     <React.Fragment>
       <div>
-        <button onClick={() => dispatch(noteAdded(noteData))}>Add note</button>
+        <button onClick={() => dispatch(noteAdded(noteData))}>Add Sample Note</button>
+        <button onClick={() => history.push('/notes/new')}>New Note</button>
       </div>
       <div>
         {notes.map((note) => (

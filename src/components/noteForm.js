@@ -2,13 +2,14 @@ import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { noteAdded } from "../store/notes";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const NoteForm = () => {
   const [title, setTitle] = useState("");
   const [noteContent, setNoteContent] = useState("");
   const [group, setGroup] = useState("");
   const dispatch = useDispatch();
-
+  const history = useHistory();
   const handleSubmit = () => {
     console.log(title);
     console.log(noteContent);
@@ -23,6 +24,8 @@ const NoteForm = () => {
     // Call the server to send note, if success, dispatch adding it
 
     dispatch(noteAdded(note));
+
+    history.push("/notes");
   };
 
   return (
